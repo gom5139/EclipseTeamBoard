@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Team_Board_Project</display-name>
+   
+   <servlet>
+  <servlet-name>ProductFrontController</servlet-name>
+  <servlet-class>project.product.controller.ProductFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ProductFrontController</servlet-name>
+ <url-pattern>*.pr</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>QnAFrontController</servlet-name>
+  <servlet-class>project.qna.controller.QnaFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>QnAFrontController</servlet-name>
+ <url-pattern>*.qa</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>MemberFrontController</servlet-name>
+  	<servlet-class>project.member.controller.MemberFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>MemberFrontController</servlet-name>
+  	<url-pattern>*.me</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+  	<servlet-name>AdminFrontController</servlet-name>
+  	<servlet-class>project.admin.controller.AdminFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AdminFrontController</servlet-name>
+  	<url-pattern>*.ad</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>BasketFrontController</servlet-name>
+  <servlet-class>project.basket.controller.BasketFrontController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>BasketFrontController</servlet-name>
+ <url-pattern>*.bs</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <filter>
+  <filter-name>Encoding</filter-name>
+  <filter-class>project.product.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>Encoding</filter-name>
+  <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
